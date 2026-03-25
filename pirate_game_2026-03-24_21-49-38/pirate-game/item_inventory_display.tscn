@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://biwvfwftefqlw"]
+
+[ext_resource type="Script" uid="uid://bfbesqmupkm5g" path="res://item_inventory_display.gd" id="1_ao3lm"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_eboou"]
+font_size = 32
+font_color = Color(1, 0, 0, 1)
+
+[node name="Item_Inventory_Display" type="TextureButton" unique_id=706061654]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ao3lm")
+
+[node name="Label" type="Label" parent="." unique_id=2101397728]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+label_settings = SubResource("LabelSettings_eboou")

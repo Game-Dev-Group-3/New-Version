@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://do3xgd2v521cc"]
+
+[ext_resource type="Script" uid="uid://cb56csh5soxsp" path="res://ship.gd" id="1_4cq66"]
+[ext_resource type="Texture2D" uid="uid://drbh4iwnalea8" path="res://boat.jpg" id="1_l3rv8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4cq66"]
+size = Vector2(150, 100)
+
+[node name="ship" type="Area2D" unique_id=874675439 groups=["interactable"]]
+script = ExtResource("1_4cq66")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1553149033]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_l3rv8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=631927088]
+shape = SubResource("RectangleShape2D_4cq66")

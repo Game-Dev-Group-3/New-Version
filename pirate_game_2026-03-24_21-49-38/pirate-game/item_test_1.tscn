@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cvvdqdk7qglwp"]
+
+[ext_resource type="Script" uid="uid://b4g0ysks3we56" path="res://item.gd" id="1_oy74t"]
+[ext_resource type="Texture2D" uid="uid://cdweu88mrcvfh" path="res://icon.svg" id="1_slp65"]
+
+[node name="Item_Test_1" type="Sprite2D" unique_id=1319240692]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_slp65")
+script = ExtResource("1_oy74t")
+metadata/_custom_type_script = "uid://b4g0ysks3we56"
