@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://drherx6xlg00q"]
+
+[ext_resource type="Texture2D" uid="uid://cdweu88mrcvfh" path="res://icon.svg" id="1_6f8b8"]
+[ext_resource type="Script" uid="uid://b4g0ysks3we56" path="res://Group3Final/Scripts/item.gd" id="2_228uq"]
+
+[node name="item_test_2" type="Sprite2D" unique_id=1056983791]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_6f8b8")
+script = ExtResource("2_228uq")
+id = 1
+metadata/_custom_type_script = "uid://b4g0ysks3we56"

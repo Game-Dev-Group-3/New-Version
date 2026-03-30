@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://h1ht241yxnjv"]
+
+[ext_resource type="Texture2D" uid="uid://cdweu88mrcvfh" path="res://icon.svg" id="1_15psf"]
+[ext_resource type="PackedScene" uid="uid://fb0n1oc1nuqq" path="res://Group3Final/Scenes/guy.tscn" id="2_ss8cv"]
+[ext_resource type="PackedScene" uid="uid://do3xgd2v521cc" path="res://Group3Final/Scenes/ship.tscn" id="3_ss8cv"]
+[ext_resource type="PackedScene" uid="uid://1oq668ahqah7" path="res://Group3Final/Scenes/test_item_giver.tscn" id="4_d0dko"]
+
+[node name="testisland" type="Node2D" unique_id=1005819365]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1096783618]
+visible = false
+scale = Vector2(10, 10)
+texture = ExtResource("1_15psf")
+
+[node name="ship" parent="." unique_id=874675439 instance=ExtResource("3_ss8cv")]
+position = Vector2(2, 126)
+
+[node name="guy" parent="." unique_id=628609075 instance=ExtResource("2_ss8cv")]
+
+[node name="test_item_giver" parent="." unique_id=2070236000 instance=ExtResource("4_d0dko")]
+position = Vector2(-158, -6)
+item_path = "res://item_test_1.tscn"
+
+[node name="test_item_giver2" parent="." unique_id=1274235682 instance=ExtResource("4_d0dko")]
+position = Vector2(-62, -74)
+item_path = "res://item_test_1.tscn"
+
+[node name="test_item_giver3" parent="." unique_id=668596390 instance=ExtResource("4_d0dko")]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(63, -65)
+item_path = "res://item_test_2.tscn"
+
+[node name="test_item_giver4" parent="." unique_id=1161998505 instance=ExtResource("4_d0dko")]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(182, 13)
+item_path = "res://item_test_2.tscn"
