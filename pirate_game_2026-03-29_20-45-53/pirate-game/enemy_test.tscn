@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://blhh2qkassxfo"]
+
+[ext_resource type="Texture2D" uid="uid://cdweu88mrcvfh" path="res://icon.svg" id="1_tegdf"]
+[ext_resource type="Script" uid="uid://du7cm56ttd75m" path="res://creature.gd" id="2_c6iok"]
+
+[node name="enemy_test" type="Sprite2D" unique_id=2030770619]
+visible = false
+texture = ExtResource("1_tegdf")
+script = ExtResource("2_c6iok")
+metadata/_custom_type_script = "uid://du7cm56ttd75m"

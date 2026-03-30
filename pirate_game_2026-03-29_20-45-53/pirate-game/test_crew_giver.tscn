@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://cx428t5s27l1j"]
+
+[ext_resource type="Script" uid="uid://vg6xmv1nbxwc" path="res://test_crew_giver.gd" id="1_8twfm"]
+[ext_resource type="Texture2D" uid="uid://3r7gvuelhdx" path="res://floater.png" id="1_uf62w"]
+[ext_resource type="PackedScene" uid="uid://duncrl8r18dy5" path="res://pirate_test.tscn" id="3_mgtco"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8twfm"]
+
+[node name="test_crew_giver" type="Area2D" unique_id=1020823343 node_paths=PackedStringArray("crewmates")]
+script = ExtResource("1_8twfm")
+crewmates = [NodePath("pirate_test"), NodePath("pirate_test2"), NodePath("pirate_test3"), NodePath("pirate_test4")]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1966646176]
+self_modulate = Color(1, 1, 0, 1)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_uf62w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=689429219]
+shape = SubResource("RectangleShape2D_8twfm")
+
+[node name="pirate_test" parent="." unique_id=612635563 instance=ExtResource("3_mgtco")]
+hp = 20
+
+[node name="pirate_test2" parent="." unique_id=1898755998 instance=ExtResource("3_mgtco")]
+hp = 20
+
+[node name="pirate_test3" parent="." unique_id=179682016 instance=ExtResource("3_mgtco")]
+hp = 20
+
+[node name="pirate_test4" parent="." unique_id=1702094705 instance=ExtResource("3_mgtco")]
+hp = 20
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

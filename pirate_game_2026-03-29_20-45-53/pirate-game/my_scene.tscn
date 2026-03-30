@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://bt6h0v2ifchxm"]
+
+[ext_resource type="Script" uid="uid://c32kk7uwtlpin" path="res://island_map.gd" id="1_cf0aq"]
+[ext_resource type="Script" uid="uid://bl2dfhsfw55hi" path="res://column_gen.gd" id="2_y1rpa"]
+[ext_resource type="PackedScene" uid="uid://wa41qr1irxix" path="res://selectable_island.tscn" id="3_uwe80"]
+
+[node name="island_map2" type="Node2D" unique_id=2102195298]
+script = ExtResource("1_cf0aq")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2124188879]
+
+[node name="columns" type="Node2D" parent="." unique_id=1792945152]
+
+[node name="1" type="Node2D" parent="columns" unique_id=1507555962]
+position = Vector2(-400, 0)
+script = ExtResource("2_y1rpa")
+
+[node name="2" type="Node2D" parent="columns" unique_id=796644130]
+position = Vector2(-300, 0)
+script = ExtResource("2_y1rpa")
+
+[node name="3" type="Node2D" parent="columns" unique_id=2040635682]
+position = Vector2(-200, 0)
+script = ExtResource("2_y1rpa")
+
+[node name="4" type="Node2D" parent="columns" unique_id=17177942]
+position = Vector2(-100, 0)
+script = ExtResource("2_y1rpa")
+
+[node name="5" type="Node2D" parent="columns" unique_id=197917414]
+script = ExtResource("2_y1rpa")
+
+[node name="6" type="Node2D" parent="columns" unique_id=588907733]
+position = Vector2(100, 0)
+script = ExtResource("2_y1rpa")
+
+[node name="7" type="Node2D" parent="columns" unique_id=1725098641]
+position = Vector2(200, 0)
+script = ExtResource("2_y1rpa")
+
+[node name="8" type="Node2D" parent="columns" unique_id=1552490674]
+position = Vector2(300, 0)
+script = ExtResource("2_y1rpa")
+
+[node name="9" type="Node2D" parent="columns" unique_id=193030854]
+position = Vector2(400, 0)
+
+[node name="selectable_island" parent="columns/9" unique_id=928722714 instance=ExtResource("3_uwe80")]
