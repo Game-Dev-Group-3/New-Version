@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://ce8l8gugdkbji"]
+
+[ext_resource type="Script" uid="uid://c32kk7uwtlpin" path="res://Group3Final/Scripts/island_map.gd" id="1_5dbf0"]
+[ext_resource type="Script" uid="uid://bl2dfhsfw55hi" path="res://Group3Final/Scripts/column_gen.gd" id="2_vvvej"]
+[ext_resource type="PackedScene" uid="uid://wa41qr1irxix" path="res://Group3Final/Scenes/selectable_island.tscn" id="3_vvvej"]
+[ext_resource type="Script" uid="uid://buuro70x3l8iy" path="res://Group3Final/Scripts/item_display.gd" id="4_ong0l"]
+
+[node name="island_map" type="Node2D" unique_id=2102195298]
+script = ExtResource("1_5dbf0")
+level = 1
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2124188879]
+
+[node name="columns" type="Node2D" parent="." unique_id=1792945152]
+
+[node name="1" type="Node2D" parent="columns" unique_id=1507555962]
+position = Vector2(-400, 0)
+script = ExtResource("2_vvvej")
+
+[node name="2" type="Node2D" parent="columns" unique_id=796644130]
+position = Vector2(-300, 0)
+script = ExtResource("2_vvvej")
+stage = 2
+
+[node name="3" type="Node2D" parent="columns" unique_id=2040635682]
+position = Vector2(-200, 0)
+script = ExtResource("2_vvvej")
+stage = 3
+
+[node name="4" type="Node2D" parent="columns" unique_id=17177942]
+position = Vector2(-100, 0)
+script = ExtResource("2_vvvej")
+stage = 4
+
+[node name="5" type="Node2D" parent="columns" unique_id=197917414]
+script = ExtResource("2_vvvej")
+stage = 5
+
+[node name="6" type="Node2D" parent="columns" unique_id=588907733]
+position = Vector2(100, 0)
+script = ExtResource("2_vvvej")
+stage = 6
+
+[node name="7" type="Node2D" parent="columns" unique_id=1725098641]
+position = Vector2(200, 0)
+script = ExtResource("2_vvvej")
+stage = 7
+
+[node name="8" type="Node2D" parent="columns" unique_id=1552490674]
+position = Vector2(300, 0)
+script = ExtResource("2_vvvej")
+stage = 8
+
+[node name="9" type="Node2D" parent="columns" unique_id=193030854]
+position = Vector2(400, 0)
+
+[node name="selectable_island" parent="." unique_id=928722714 instance=ExtResource("3_vvvej")]
+offset_left = 400.0
+offset_right = 455.0
+offset_bottom = 31.0
+stage = 9
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=485994351]
+offset_top = -233.0
+offset_right = 40.0
+offset_bottom = -193.0
+use_top_left = true
+script = ExtResource("4_ong0l")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer" unique_id=1474699695]
+layout_mode = 2

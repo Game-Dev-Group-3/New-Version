@@ -1,0 +1,78 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" uid="uid://c32kk7uwtlpin" path="res://Group3Final/Scripts/island_map.gd" id="1_pao2a"]
+[ext_resource type="Script" uid="uid://bl2dfhsfw55hi" path="res://Group3Final/Scripts/column_gen.gd" id="2_tvnnp"]
+[ext_resource type="PackedScene" uid="uid://wa41qr1irxix" path="res://Group3Final/Scenes/selectable_island.tscn" id="3_0hurm"]
+[ext_resource type="Script" uid="uid://b273ioucc81r6" path="res://Group3Final/Scripts/selectable_island.gd" id="4_361io"]
+
+[node name="island_map" type="Node2D" unique_id=2102195298]
+script = ExtResource("1_pao2a")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2124188879]
+
+[node name="columns" type="Node2D" parent="." unique_id=1792945152]
+
+[node name="1" type="Node2D" parent="columns" unique_id=1507555962]
+position = Vector2(-400, 0)
+script = ExtResource("2_tvnnp")
+
+[node name="2" type="Node2D" parent="columns" unique_id=796644130]
+position = Vector2(-300, 0)
+script = ExtResource("2_tvnnp")
+
+[node name="3" type="Node2D" parent="columns" unique_id=2040635682]
+position = Vector2(-200, 0)
+script = ExtResource("2_tvnnp")
+
+[node name="4" type="Node2D" parent="columns" unique_id=17177942]
+position = Vector2(-100, 0)
+script = ExtResource("2_tvnnp")
+
+[node name="5" type="Node2D" parent="columns" unique_id=197917414]
+script = ExtResource("2_tvnnp")
+
+[node name="6" type="Node2D" parent="columns" unique_id=588907733]
+position = Vector2(100, 0)
+script = ExtResource("2_tvnnp")
+
+[node name="7" type="Node2D" parent="columns" unique_id=1725098641]
+position = Vector2(200, 0)
+script = ExtResource("2_tvnnp")
+
+[node name="8" type="Node2D" parent="columns" unique_id=1552490674]
+position = Vector2(300, 0)
+script = ExtResource("2_tvnnp")
+
+[node name="9" type="Node2D" parent="columns" unique_id=193030854]
+position = Vector2(400, 0)
+
+[node name="selectable_island" type="Button" parent="columns/9" unique_id=928722714 instance=ExtResource("3_0hurm")]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "island"
+script = ExtResource("4_361io")
+
+[connection signal="pressed" from="columns/9/selectable_island" to="columns/9/selectable_island" method="_on_pressed"]
+[connection signal="pressed" from="selectable_island" to="selectable_island" method="_on_pressed"]
+[connection signal="pressed" from="@Button@2" to="@Button@2" method="_on_pressed"]
+[connection signal="pressed" from="@Button@3" to="@Button@3" method="_on_pressed"]
+[connection signal="pressed" from="@Button@4" to="@Button@4" method="_on_pressed"]
+[connection signal="pressed" from="@Button@5" to="@Button@5" method="_on_pressed"]
+[connection signal="pressed" from="@Button@6" to="@Button@6" method="_on_pressed"]
+[connection signal="pressed" from="@Button@7" to="@Button@7" method="_on_pressed"]
+[connection signal="pressed" from="@Button@8" to="@Button@8" method="_on_pressed"]
+[connection signal="pressed" from="@Button@9" to="@Button@9" method="_on_pressed"]
+[connection signal="pressed" from="@Button@10" to="@Button@10" method="_on_pressed"]
+[connection signal="pressed" from="@Button@11" to="@Button@11" method="_on_pressed"]
+[connection signal="pressed" from="@Button@12" to="@Button@12" method="_on_pressed"]
+[connection signal="pressed" from="@Button@13" to="@Button@13" method="_on_pressed"]
+[connection signal="pressed" from="@Button@14" to="@Button@14" method="_on_pressed"]
+[connection signal="pressed" from="@Button@15" to="@Button@15" method="_on_pressed"]
+[connection signal="pressed" from="@Button@16" to="@Button@16" method="_on_pressed"]
+[connection signal="pressed" from="@Button@17" to="@Button@17" method="_on_pressed"]
+[connection signal="pressed" from="@Button@18" to="@Button@18" method="_on_pressed"]
+[connection signal="pressed" from="@Button@19" to="@Button@19" method="_on_pressed"]
+[connection signal="pressed" from="@Button@20" to="@Button@20" method="_on_pressed"]
+[connection signal="pressed" from="@Button@21" to="@Button@21" method="_on_pressed"]
+[connection signal="pressed" from="@Button@22" to="@Button@22" method="_on_pressed"]
+[connection signal="pressed" from="@Button@23" to="@Button@23" method="_on_pressed"]

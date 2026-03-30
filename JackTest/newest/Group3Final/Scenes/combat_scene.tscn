@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://dngkc08wkye3g"]
+
+[ext_resource type="Script" uid="uid://m2yfesn8f27w" path="res://Group3Final/Scripts/combat_scene.gd" id="1_s1qhn"]
+[ext_resource type="PackedScene" uid="uid://duncrl8r18dy5" path="res://Group3Final/Scenes/pirate_test.tscn" id="2_ct1co"]
+[ext_resource type="PackedScene" uid="uid://blhh2qkassxfo" path="res://Group3Final/Scenes/enemy_test.tscn" id="3_lo0hl"]
+
+[node name="combat_scene" type="Node2D" unique_id=190353884 node_paths=PackedStringArray("crewmates", "enemies")]
+script = ExtResource("1_s1qhn")
+crewmates = [NodePath("pirate_test"), NodePath("pirate_test2"), NodePath("pirate_test3"), NodePath("pirate_test4")]
+enemies = [NodePath("enemy_test"), NodePath("enemy_test2"), NodePath("enemy_test3"), NodePath("enemy_test4")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1566697922]
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1820500426]
+offset_top = 200.0
+offset_right = 40.0
+offset_bottom = 240.0
+use_top_left = true
+
+[node name="attack" type="Button" parent="CenterContainer" unique_id=1594556543]
+layout_mode = 2
+text = "attack"
+
+[node name="enemies" type="CenterContainer" parent="." unique_id=1239585697]
+offset_top = -150.0
+offset_right = 40.0
+offset_bottom = -110.0
+use_top_left = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="enemies" unique_id=673866988]
+layout_mode = 2
+
+[node name="crewmates" type="CenterContainer" parent="." unique_id=1550868719]
+offset_top = 50.0
+offset_right = 40.0
+offset_bottom = 90.0
+use_top_left = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="crewmates" unique_id=218802665]
+layout_mode = 2
+
+[node name="pirate_test" parent="." unique_id=612635563 instance=ExtResource("2_ct1co")]
+
+[node name="pirate_test2" parent="." unique_id=1826604502 instance=ExtResource("2_ct1co")]
+
+[node name="pirate_test3" parent="." unique_id=775201541 instance=ExtResource("2_ct1co")]
+
+[node name="pirate_test4" parent="." unique_id=1632863637 instance=ExtResource("2_ct1co")]
+
+[node name="enemy_test" parent="." unique_id=2030770619 instance=ExtResource("3_lo0hl")]
+
+[node name="enemy_test2" parent="." unique_id=1802919698 instance=ExtResource("3_lo0hl")]
+
+[node name="enemy_test3" parent="." unique_id=522949403 instance=ExtResource("3_lo0hl")]
+
+[node name="enemy_test4" parent="." unique_id=571674545 instance=ExtResource("3_lo0hl")]
+
+[connection signal="button_down" from="CenterContainer/attack" to="." method="_on_attack_button_down"]

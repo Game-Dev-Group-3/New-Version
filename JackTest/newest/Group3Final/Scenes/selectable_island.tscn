@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://wa41qr1irxix"]
+
+[ext_resource type="Script" uid="uid://b273ioucc81r6" path="res://Group3Final/Scripts/selectable_island.gd" id="1_k31yu"]
+
+[node name="selectable_island" type="Button" unique_id=928722714]
+offset_right = 8.0
+offset_bottom = 8.0
+disabled = true
+text = "island"
+script = ExtResource("1_k31yu")

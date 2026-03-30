@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://6ckssjd3m8pg"]
+
+[ext_resource type="Texture2D" uid="uid://dqe7as5fmnj4c" path="res://Group3Final/Assets/bullet.png" id="1_2a8rv"]
+[ext_resource type="Script" uid="uid://ceu02qf8s4nbb" path="res://Group3Final/Scripts/enemy_targetable.gd" id="2_h8xmp"]
+[ext_resource type="Texture2D" uid="uid://3r7gvuelhdx" path="res://Group3Final/Assets/floater.png" id="2_le3ea"]
+[ext_resource type="Texture2D" uid="uid://crk325du1c8e3" path="res://Group3Final/Assets/mouse.png" id="3_bpswj"]
+
+[node name="enemy_targetable" type="TextureButton" unique_id=1648341836]
+offset_right = 40.0
+offset_bottom = 40.0
+disabled = true
+texture_hover = ExtResource("1_2a8rv")
+texture_disabled = ExtResource("2_le3ea")
+script = ExtResource("2_h8xmp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=342727249]
+visible = false
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("3_bpswj")
+
+[node name="Label" type="Label" parent="." unique_id=249189706]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
