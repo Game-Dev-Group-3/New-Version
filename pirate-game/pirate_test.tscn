@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://duncrl8r18dy5"]
+
+[ext_resource type="Texture2D" uid="uid://cdweu88mrcvfh" path="res://icon.svg" id="1_rnur0"]
+[ext_resource type="Script" uid="uid://du7cm56ttd75m" path="res://creature.gd" id="2_ibjal"]
+
+[node name="pirate_test" type="Sprite2D" unique_id=612635563]
+visible = false
+texture = ExtResource("1_rnur0")
+script = ExtResource("2_ibjal")
+metadata/_custom_type_script = "uid://du7cm56ttd75m"

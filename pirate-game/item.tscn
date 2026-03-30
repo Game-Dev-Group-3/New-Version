@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://i7i6koat4f6s"]
+
+[ext_resource type="Script" uid="uid://b4g0ysks3we56" path="res://item.gd" id="1_tnite"]
+
+[node name="Item" type="Node" unique_id=1236446990]
+script = ExtResource("1_tnite")
+metadata/_custom_type_script = "uid://b4g0ysks3we56"

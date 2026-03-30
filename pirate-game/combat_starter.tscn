@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://der0ubcexsbcu"]
+
+[ext_resource type="Script" uid="uid://d2nabknu2sqj6" path="res://combat_starter.gd" id="1_hqyg6"]
+[ext_resource type="Texture2D" uid="uid://3r7gvuelhdx" path="res://floater.png" id="1_o4b3s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqyg6"]
+
+[node name="combat starter" type="Area2D" unique_id=1482115747]
+process_mode = 3
+script = ExtResource("1_hqyg6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=969778907]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_o4b3s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1010268631]
+shape = SubResource("RectangleShape2D_hqyg6")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
